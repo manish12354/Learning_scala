@@ -23,17 +23,24 @@ class CalcTest extends FunSuite with Matchers {
   }
 
   test("should give correct factorial of 2"){
-    val fact2 = new Calc().factorial(2);
-    fact2 shouldBe 2
+    val factTwo = new Calc().factorial(2);
+    factTwo shouldBe 2
   }
 
   test("should give 6 as factorial of 3"){
-    val fact3 = new Calc().factorial(3);
-    fact3 shouldBe 6
+    val factThree = new Calc().factorial(3);
+    factThree shouldBe 6
   }
+
   test("should give 0 as factorial of 0"){
-    val fact0 = new Calc().factorial(0);
-
+    val factZero = new Calc().factorial(0);
+    factZero shouldBe 1
   }
 
+  test("should give 0 as factorial of negative numbers"){
+    val factNegativeOne = new Calc().factorial(-1);
+    factNegativeOne shouldBe 0
+    val factNegativeTwo = new Calc().factorial(-2);
+    factNegativeTwo shouldBe 0
+  }
 }

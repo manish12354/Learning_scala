@@ -15,13 +15,13 @@ class Calc {
   }
 
   def factorial(number: Int) : Int ={
-    if (number == 0){
+    if (number < 0){
+      0
+    } else if (number == 0){
       1
     } else {
       number * factorial(number-1)
     }
-
-//     number > 1 ? factorial(number) * (number-1) : 0
   }
 
 }
